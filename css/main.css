@@ -1,0 +1,191 @@
+@import 'reset.css';
+
+* { list-style: none; margin: 0; padding: 0; }
+body { background: url(../img/bg.gif); font-family: arial, helvetica, sans-serif; height: 1200px; margin: 0; overflow: hidden; padding: 0; width: 15104px; }
+
+/* * * The fonts included are copyrighted by the vendor listed below. * * @vendor: Sean Johnson * @licenseurl: http://www.seanjohnson.net/portfolio/fonts/hand-of-sean/ * * */  
+@font-face {
+	font-family: 'Sean';
+	src: url('handsean.eot');
+	src: local('Sean'), local('HandOfSean'), url('handsean.woff') format('woff'), url('handsean.ttf') format('truetype'), url('handsean.svg#HandOfSean') format('svg');
+}
+
+/* Main Page Elements */
+
+.container { display: block; float: left; font-family: sean, georgia, "times new roman", serif; height: 1200px; margin: 0; overflow: hidden; padding: 0; position: relative; width: 2304px; }
+.last { width: 1280px; }
+.hidden { position: absolute; text-indent: -16000px; }
+.doodle { display: block; float: right; height: 1200px; margin: 0; padding: 0; position: relative; width: 1024px; }
+.arrow { font-family: sean; position: absolute; text-align: center; z-index: 10; }
+.homebutton { background: url(../img/home.png) top left; height: 34px; position: absolute; width: 135px; }
+.homebutton:hover { background: url(../img/home.png) top right; }
+a.arrow { color: #181818; font-size: 18px; letter-spacing: 1px; text-decoration: none; }
+.next { background: url(../img/rightarrow.png); height: 85px; padding: 50px 0 0 10px; width: 170px; }
+.prev { background: url(../img/leftarrow.png); height: 75px; padding: 60px 0 0 0; width: 160px; }
+.arrow:hover { background-position: top right; }
+.vertarrow { float: right; height: 97px; margin-left: 5px; text-indent: -9999px; width: 136px; z-index: 5; }
+.vertarrow:hover { background-position: top right; }
+.down { background: url(../img/downarrow.png); }
+.up { background: url(../img/uparrow.png); }
+
+/* COMPONENTS */
+#home { background: url(../img/page1.jpg) top left no-repeat; }
+#portfolio { background: url(../img/page2bg.jpg) top left repeat-y; }
+#about { background: url(../img/page3.jpg) top left no-repeat; }
+#coverletter { background: url(../img/page4.jpg) top left no-repeat; }
+#resume { background: url(../img/page5.jpg) top left no-repeat; }
+#contact { background: url(../img/page6.jpg) top left no-repeat; }
+#accept { background: url(../img/page7.jpg) top left no-repeat; }
+#doodle1 { background: url(../img/doodle1.jpg) top left no-repeat; }
+#doodle2 { background: url(../img/doodle2.jpg) top left no-repeat; }
+#doodle3 { background: url(../img/doodle3.jpg) top left no-repeat; }
+#doodle4 { background: url(../img/doodle4.jpg) top left no-repeat; }
+#doodle5 { background: url(../img/doodle5.jpg) top left no-repeat; }
+#doodle6 { background: url(../img/doodle6.jpg) top left no-repeat; }
+
+/*HOME */
+
+#home .next { left: 1080px; top: 480px; }
+.homebuttons li a { text-indent: -9999px; }
+.step1 a { background: url(../img/steps.png) 0px 0px; height: 116px; left: 71px; position: absolute; top: 215px; width: 260px; }
+.step2 a { background: url(../img/steps.png) 0px -116px; height: 124px; left: 370px; position: absolute; top: 260px; width: 186px; }
+.step3 a { background: url(../img/steps.png) 0px -240px; height: 128px; left: 596px; position: absolute; top: 289px; width: 220px; }
+.step4 a { background: url(../img/steps.png) 0px -367px; height: 93px; left: 437px; position: absolute; top: 453px; width: 197px; }
+.step5 a { background: url(../img/steps.png) 0px -459px; height: 143px; left: 685px; position: absolute; top: 451px; width: 306px; }
+.step1:hover, .step1 a:hover { background-position: 306px 0px; }
+.step2:hover, .step2 a:hover { background-position: 306px -116px; }
+.step3:hover, .step3 a:hover { background-position: 306px -240px; }
+.step4:hover, .step4 a:hover { background-position: 306px -367px; }
+.step5:hover, .step5 a:hover { background-position: 306px -459px; }
+.funnything { font-family: arial, helvetica, sans-serif; left: 1020px; position: absolute; top: 100px; width: 185px; }
+.funnything a { font-weight: bold; }
+.funnything li { margin-bottom: 20px; }
+
+/* PORTFOLIO */
+
+#portfolio .prev { top: 50px; }
+#portfolio .next { left: 1095px; top: 60px; }
+#portnav { font-size: 30px; height: 110px; left: 284px; position: absolute; top: 73px; width: 800px; z-index: 10; }
+a.portlink { border: 1px solid #313131; height: 80px; width: 80px; }
+a.portlink:hover { background: red; background-position: top right; }
+#portnav li { float: right; height: 80px; padding: 15px; width: 80px; }
+.highlighted { background: url(../img/porthighlight.png) top left no-repeat; }
+.rip { background: url(../img/rips.png); position: absolute; z-index: 5; }
+.leftrip { background-position: left; height: 1200px; width: 106px; }
+.rightrip { background-position: right; height: 1200px; left: 1130px; width: 150px; }
+.moleskin { background: url(../img/moleskin.jpg); height: 210px; left: 110px; position: relative; width: 1030px; z-index: 1; }
+#portprojects { float: left; height: 500px; overflow: hidden; position: relative; width: 1280px; }
+.portcontain { float: left; position: relative; width: 20000px; }
+li.portitem { background: url(../img/portfoliopage.png) no-repeat top left; float: left; font-size: 36px; height: 429px; padding: 30px 0 0 205px; width: 1100px; }
+li.portitem h2 { font-family: sean, georgia, "times new roman", serif; z-index: 3; }
+li.portitem p { font-family: georgia, "times new roman", times, serif; font-size: 11px; height: 180px; margin: 20px 0 0 30px; width: 820px; z-index: 3; }
+ul.portthumbs { margin: 10px 90px 0 0; width: 855px; z-index: 3; }
+ul.portthumbs li { border: 2px solid #313131; filter: alpha(opacity = 70); float: right; height: 80px; list-style: none; margin: 12px; moz-box-shadow: 0 0 3px #000; opacity: 0.7; webkit-box-shadow: 0 0 3px #000; width: 80px; }
+ul.portthumbs li:hover { filter: alpha(opacity = 100); moz-box-shadow: 0 0 5px #000; opacity: 1; webkit-box-shadow: 0 0 5px #000; }
+.portimage { background: url(../img/page2pencil.jpg) no-repeat; height: 500px; left: 96px; position: absolute; top: 638px; width: 1010px; }
+#project1 { background: url(../img/pages/1.jpg) 185px 19px no-repeat, url(../img/portfoliopage.png) no-repeat top left; }
+#project2 { background: url(../img/pages/2.jpg) 185px 19px no-repeat, url(../img/portfoliopage.png) no-repeat top left; }
+#project3 { background: url(../img/pages/3.jpg) 185px 19px no-repeat, url(../img/portfoliopage.png) no-repeat top left; }
+#project4 { background: url(../img/pages/4.jpg) 185px 19px no-repeat, url(../img/portfoliopage.png) no-repeat top left; }
+#project5 { background: url(../img/pages/5.jpg) 185px 19px no-repeat, url(../img/portfoliopage.png) no-repeat top left; }
+#project6 { background: url(../img/pages/6.jpg) 185px 19px no-repeat, url(../img/portfoliopage.png) no-repeat top left; }
+
+/* ABOUT */
+
+#about .homebutton { left: 20px; }
+#about .prev { top: 50px; }
+#about .next { left: 1095px; top: 60px; }
+.diary { color: #3a3939; font-family: georgia, "times new roman", times, serif; height: 500px; left: 222px; line-height: 37px; position: absolute; text-align: justify; top: 77px; width: 400px; }
+.alignright { float: right; }
+.italic { font-style: italic; }
+.underline { text-decoration: underline; }
+
+/* COVER LETTER */
+#coverletter .homebutton { left: 20px; }
+#coverletter .prev { left: 100px; top: 40px; }
+#coverletter .arrow1 { left: 960px; top: 50px; }
+#coverletter .arrow2 { left: 960px; top: 1060px; }
+#coverletter .down { left: 870px; top: 400px; }
+#coverletter2 { height: 0; position: absolute; top: 575px; width: 0; }
+.letter { font-family: georgia, "times new roman", times, serif; font-size: 15px; height: 1010px; left: 300px; line-height: 21px; position: absolute; text-align: justify; top: 35px; width: 712px; }
+.letter p { margin-bottom: 21px; }
+p.coverend { text-align: right; }
+
+
+
+
+/* RESUME */
+#resume { font-family: georgia, "times new roman", times, serif; }
+#resume .homebutton { left: 20px; }
+#resume .prev { top: 40px; }
+#resume .next { left: 1095px; top: 50px; }
+.downloadcv { background: url(../img/downloadcv.jpg); height: 80px; left: 118px; position: absolute; top: 161px; width: 95px; }
+.downloadcv:hover { background-position: top right; }
+.col1 { height: 460px; left: 235px; position: absolute; top: 166px; width: 410px; }
+.col2 { height: 460px; left: 675px; position: absolute; top: 166px; width: 475px; }
+#resume h2 { font-weight: bold; margin-top: 18px; text-transform: uppercase; }
+.cvname { font-size: 12px; font-weight: bold; text-transform: uppercase; }
+.cvyear { font-size: 14px; margin-right: 5px; }
+.hiddenyear { color: #fefefe; }
+.cvjobs { text-decoration: underline; }
+ul.experience { margin-top: 3px; }
+ul.experience li { font-size: 12px; list-style: disc inside; margin-left: 10px; }
+li.job { margin-top: 18px; }
+li.first { margin: 0; }
+
+
+/* CONTACT */
+#contact .homebutton { left: 20px; }
+#contact .prev { top: 50px; }
+#contact .next { left: 1095px; top: 60px; }
+.visitor { color: #9f0000; left: -10px; position: absolute; }
+.vname { top: -20px; }
+.vmail { top: 38px; }
+.vquestion { top: 95px; }
+label { display: block; height: 0; margin: 0; padding: 0; text-indent: -99999px; width: 0; }
+.mailform { left: 208px; margin: 0; padding: 0; position: absolute; top: 149px; }
+.mailform input { background: none; border: 0; height: 27px; margin-bottom: 27px; padding: 2px 10px; width: 285px; }
+.mailform textarea { background: none; border: 0; height: 111px; padding: 5px 10px; width: 285px; }
+.mailmessage { color: #079f00; font-size: 18px; font-style: italic; left: 400px; position: absolute; top: 540px; width: 185px; }
+.mailerror { color: #9f0000; }
+.sendemail { background: url(../img/sendbutton.jpg); border: 0; display: block; height: 67px; left: 372px; position: absolute; top: 465px; width: 177px; }
+.sendemail:hover { background-position: -177px 0; }
+.sendemail:active { background-position: 177px 0; }
+.twitter { left: 200px; position: absolute; top: 980px; }
+.contactim { height: 279px; left: 1011px; position: absolute; top: 286px; width: 215px; }
+.contactim a { text-indent: -16000px; width: 215px; }
+.imfacebook a { background: url(../img/page6im.jpg) 0px 0px; float: left; height: 58px; }
+.imtwitter a { background: url(../img/page6im.jpg) 0px -58px; float: left; height: 56px; }
+.imlinkedin a { background: url(../img/page6im.jpg) 0px -114px; float: left; height: 58px; }
+.imwindowslive a { background: url(../img/page6im.jpg) 0px -172px; float: left; height: 53px; }
+.imskype a { background: url(../img/page6im.jpg) 0px -225px; float: left; height: 54px; }
+.imfacebook:hover, .imfacebook a:hover { background-position: -215px 0px; }
+.imtwitter:hover, .imtwitter a:hover { background-position: -215px -58px; }
+.imlinkedin:hover, .imlinkedin a:hover { background-position: -215px -114px; }
+.imwindowslive:hover, .imwindowslive a:hover { background-position: -215px -172px; }
+.imskype:hover, .imskype a:hover { background-position: -215px -225px; }
+#twitterpage { position: absolute; top: 760px; }
+.twitterpage { background: url(../img/page6im.jpg) 0px -279px; height: 67px; left: 114px; position: absolute; top: 828px; width: 252px; }
+.twitterpage:hover { background-position: 252px -279px; }
+#contact .up { left: 470px; position: absolute; top: 1135px; }
+#twitter { height: 255px; left: 120px; overflow: hidden; position: absolute; top: 900px; width: 338px; }
+ul#twitter_update_list { font-size: 22px; list-style: none; }
+ul#twitter_update_list li { color: #314c60; margin-bottom: 5px; padding: 10px; }
+#twitter a { color: #355d90; text-decoration: none; }
+#twitter a:hover { color: #0e56b2; }
+#twitter ul li a { display: block; font-size: 8px; margin-top: 20px; text-align: right; }
+#twitter ul li span a { display: inline; font-size: 22px; text-align: left; }
+.twitterlink { background: url(../img/twitterlink.jpg); border: 0; display: block; height: 73px; left: 132px; position: absolute; top: 1086px; width: 73px; z-index: 10; }
+.twitterlink:hover { background-position: -73px 0; }
+.twitterlink:active { background-position: -146px 0; }
+
+
+/* ACCEPT */
+#accept a.badge { display: block; position:absolute; top:30px; left:340px; width:160px; height:160px; background: url(../img/badge.png); z-index:9999; }
+#accept a.badge:hover { background-position:160px 0; }
+#accept .homebutton { left: 0; }	
+#accept .arrow1 { top: 25px; left: 90px; }
+#accept .arrow2 { top: 155px; left: 80px; }
+#accept .arrow3 { top: 285px; left: 70px; }
+#accept .arrow4 { top: 415px; left: 60px; }
+#accept .arrow5 { top: 545px; left: 50px; }
