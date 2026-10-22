@@ -1,0 +1,36 @@
+name: Fetch original site files
+
+on:
+  push:
+    branches: [main]
+    paths: ['.fetch/manifest.tsv']
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download files listed in the manifest
+        run: |
+          set -u
+          failed=0
+          while IFS=$'\t' read -r url path; do
+            [ -z "$url" ] && continue
+            mkdir -p "$(dirname "$path")"
+            if ! curl -fsSL --retry 2 -o "$path" "$url"; then
+              echo "FAILED: $path" | tee -a .fetch/failed.txt
+              failed=1
+            fi
+          done < .fetch/manifest.tsv
+          git rm -q --cached .fetch/manifest.tsv
+          rm .fetch/manifest.tsv
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Restore original acceptjoel.com files from backup"
+          git push
