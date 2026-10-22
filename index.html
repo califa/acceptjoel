@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+<meta property="og:title" content="The Most AWESOME Portfolio" />
+<meta property="og:site_name" content="Accept Joel" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="Joel Califa's Online Portfolio" />
+<meta property="og:image" content="fbicon.jpg" />
+<title>How to accept Joel in 5 easy steps : Joel Califa's online portfolio</title>
+<link rel="stylesheet" type="text/css" href="css/main.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="js/colorbox.css" />
+
+<script type="text/javascript" src="js/jquery-1.4.min.js"></script>
+<script type="text/javascript" src="js/jquery.scrollTo-min.js"></script>
+<script type="text/javascript" src="js/jquery.localscroll-min.js"></script>
+<script type="text/javascript" src="js/jquery.colorbox-min.js"></script>
+<script type="text/javascript" src="js/init.js"></script>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a.thiswindow").colorbox({transition:"fade", maxHeight:"95%", maxWidth:"95%", current:"", title:function(){ return $(this).attr('caption');} });
+  });
+
+  $(function(){
+    $('a.newwindow').click(function(){
+      window.open(this.href);
+      return false;
+    });
+
+    // The original form posted to a PHP mailer; on a static host it opens the visitor's email app instead.
+    $('#mailform').submit(function(){
+      var name = $.trim($('input[name=name]').val()),
+          email = $.trim($('input[name=email]').val()),
+          question = $.trim($('textarea[name=question]').val()),
+          $msg = $('.mailmessage');
+      if (!name || !email || !question) {
+        $msg.addClass('mailerror').html('*please fill in <strong>all</strong> items');
+        return false;
+      }
+      if (!/^[a-zA-Z0-9._+-]+@[a-zA-Z0-9-]+\.[a-zA-Z.]{2,}$/.test(email)) {
+        $msg.addClass('mailerror').html('*<strong>invalid</strong> email address');
+        return false;
+      }
+      var body = '[name]\n ' + name + '\n\n[email]\n ' + email + '\n\n[question]\n ' + question + '\n';
+      window.location.href = 'mailto:joel@joelcalifa.com?subject=' + encodeURIComponent('AcceptJoel Email Form') + '&body=' + encodeURIComponent(body);
+      $msg.removeClass('mailerror').html('Your email is <strong>ready to send</strong>');
+      return false;
+    });
+  });
+</script>
+
+</head>
+<body>
+<!-- HOME -->
+<div id="home" class="container"><div id="doodle1" class="doodle"></div>
+    <div class="hidden">
+        This plan is for resolution of 1280x800 and above. Please use a modern browser and grant some loading time. I will love you for it.
+        <h1>How to accept Joel in 5 easy steps!</h1>
+    </div>
+    <div class="hidden">Designed and coded by Joel Califa.</div>
+
+    <ul class="homebuttons">
+        <li class="step1"><a class="mainlink" href="#portfolio">Step 1: Fall in love with his portfolio</a></li>
+        <li class="step2"><a class="mainlink" href="#about">Step 2: Get to know him</a></li>
+        <li class="step3"><a class="mainlink" href="#coverletter">Step 3: Make sure he's serious</a></li>
+        <li class="step4"><a class="mainlink" href="#contact">Step 4: Get in touch with him</a></li>
+        <li class="step5"><a class="mainlink" href="#accept">Step 5: Tell him he's in (but to leave his ego at home)</a></li>
+    </ul>
+
+    <ul class="funnything">
+        <li><a class="thiswindow" caption="<h1>The best guide in existence!</h1>If you haven't figured out how to accept Joel yet, this extensive guide may help!" href="img/guide.jpg">Are you having trouble accepting Joel?</a> An all around guide!</li>
+        <li><a class="thiswindow" caption="<h1>New merchandise on its way!</h1>Caps, backpacks, hot air balloons and more!<br /><br /><h4><strong>Disclaimer:</strong> Joel is not actually such an ass. He doesn't generally speak in third person either.</h4>" href="img/merchandise.jpg">For those excited about their new students</a> All new merchandise for sale!</li>
+    </ul>
+    <a class="next arrow mainlink" href="#portfolio">Let's begin!</a>
+
+</div>
+
+<!-- PORTFOLIO -->
+<div id="portfolio" class="container"><div id="doodle2" class="doodle"></div>
+    <a class="prev arrow mainlink" href="#home">Home</a>
+    <a class="next arrow mainlink" href="#about">About Joel</a>
+    <div class="rip leftrip"></div><div class="rip rightrip"></div> <!-- rips -->
+    <div class="moleskin"></div> <!-- moleskin -->
+
+    <ul id="portnav">
+        <li><a class="portlink hidden" href="#project1" style="background: url(portfolio/mainthumbs/1.jpg) top left no-repeat; position: absolute;">Califa Gallery</a></li>
+        <li><a class="portlink hidden" href="#project2" style="background: url(portfolio/mainthumbs/2.jpg) top left no-repeat; position: absolute;">AzBye.com</a></li>
+        <li><a class="portlink hidden" href="#project3" style="background: url(portfolio/mainthumbs/3.jpg) top left no-repeat; position: absolute;">Course Projects</a></li>
+        <li><a class="portlink hidden" href="#project4" style="background: url(portfolio/mainthumbs/4.jpg) top left no-repeat; position: absolute;">T-shirt Sites</a></li>
+        <li><a class="portlink hidden" href="#project5" style="background: url(portfolio/mainthumbs/5.jpg) top left no-repeat; position: absolute;">Children's Book</a></li>
+        <li><a class="portlink hidden" href="#project6" style="background: url(portfolio/mainthumbs/6.jpg) top left no-repeat; position: absolute;">JoelFolio.com</a></li>
+        <li class="highlighted"><a class="portlink hidden" href="#project7" style="background: url(portfolio/mainthumbs/7.jpg) top left no-repeat; position: absolute;">Parsons Challenge</a></li>
+    </ul>
+
+    <div id="portprojects">
+        <ul class="portcontain">
+
+            <li id="project7" class="portitem">
+                <h2>Parsons Challenge</h2>
+                <p></p>
+                <ul class="portthumbs">
+                    <li><a href="portfolio/large/parsons_1.jpg" class="thiswindow" rel="project7" caption="<h1>Parsons Challenge</h1>"><img src="portfolio/thumbs/parsons_1.jpg" alt="Parsons Challenge" title="Parsons Challenge" /></a></li>
+                    <li><a href="portfolio/large/parsons_2.jpg" class="thiswindow" rel="project7" caption="<h1>Parsons Challenge</h1>"><img src="portfolio/thumbs/parsons_2.jpg" alt="Parsons Challenge" title="Parsons Challenge" /></a></li>
+                    <li><a href="portfolio/large/parsons_3.jpg" class="thiswindow" rel="project7" caption="<h1>Parsons Challenge</h1>"><img src="portfolio/thumbs/parsons_3.jpg" alt="Parsons Challenge" title="Parsons Challenge" /></a></li>
+                    <li><a href="parsons.html" class="newwindow"><img src="portfolio/thumbs/parsons_external.jpg" alt="Parsons Challenge" title="Parsons Challenge" /></a></li>
+                </ul>
+            </li>
+
+            <li id="project6" class="portitem">
+                <h2>JoelFolio.com</h2>
+                <p></p>
+                <ul class="portthumbs">
+                    <li><a href="portfolio/large/joelfolio_header.jpg" class="thiswindow" rel="project6" caption="<h1>Header</h1>"><img src="portfolio/thumbs/joelfolio_header.jpg" alt="Header" title="Header" /></a></li>
+                    <li><a href="portfolio/large/joelfolio_highlight.jpg" class="thiswindow" rel="project6" caption="<h1>Highlight</h1>"><img src="portfolio/thumbs/joelfolio_highlight.jpg" alt="Highlight" title="Highlight" /></a></li>
+                    <li><a href="portfolio/large/joelfolio_grid.jpg" class="thiswindow" rel="project6" caption="<h1>Grid</h1>"><img src="portfolio/thumbs/joelfolio_grid.jpg" alt="Grid" title="Grid" /></a></li>
+                    <li><a href="portfolio/large/joelfolio_portfolio.jpg" class="thiswindow" rel="project6" caption="<h1>Portfolio</h1>"><img src="portfolio/thumbs/joelfolio_portfolio.jpg" alt="Portfolio" title="Portfolio" /></a></li>
+                    <li><a href="portfolio/large/joelfolio_lightbox.jpg" class="thiswindow" rel="project6" caption="<h1>Lightbox</h1>"><img src="portfolio/thumbs/joelfolio_lightbox.jpg" alt="Lightbox" title="Lightbox" /></a></li>
+                </ul>
+            </li>
+
+            <li id="project5" class="portitem">
+                <h2>Children's Book</h2>
+                <p></p>
+                <ul class="portthumbs">
+                    <li><a href="portfolio/large/chicken_sketch.jpg" class="thiswindow" rel="project5" caption="<h1>Sketch</h1>"><img src="portfolio/thumbs/chicken_sketch.jpg" alt="Sketch" title="Sketch" /></a></li>
+                    <li><a href="portfolio/large/chicken_old.jpg" class="thiswindow" rel="project5" caption="<h1>Old version</h1>"><img src="portfolio/thumbs/chicken_old.jpg" alt="Old version" title="Old version" /></a></li>
+                    <li><a href="portfolio/large/chicken_new.jpg" class="thiswindow" rel="project5" caption="<h1>New version</h1>"><img src="portfolio/thumbs/chicken_new.jpg" alt="New version" title="New version" /></a></li>
+                    <li><a href="portfolio/large/chicken_color.jpg" class="thiswindow" rel="project5" caption="<h1>Color</h1>"><img src="portfolio/thumbs/chicken_color.jpg" alt="Color" title="Color" /></a></li>
+                </ul>
+            </li>
+
+            <li id="project4" class="portitem">
+                <h2>T-shirt Sites</h2>
+                <p></p>
+                <ul class="portthumbs">
+                    <li><a href="portfolio/tofu/" class="newwindow"><img src="portfolio/thumbs/shirts_tofu.jpg" alt="Tofu" title="Tofu" /></a></li>
+                    <li><a href="portfolio/threshold/" class="newwindow"><img src="portfolio/thumbs/shirts_thres.jpg" alt="Threshold Shirts" title="Threshold Shirts" /></a></li>
+                </ul>
+            </li>
+
+            <li id="project3" class="portitem">
+                <h2>Course Projects</h2>
+                <p></p>
+                <ul class="portthumbs">
+                    <li><a href="portfolio/large/6b_drinks.jpg" class="thiswindow" rel="project3" caption="<h1>Drinks</h1>"><img src="portfolio/thumbs/6b_drinks.jpg" alt="Drinks" title="Drinks" /></a></li>
+                    <li><a href="portfolio/large/6b_ink.jpg" class="thiswindow" rel="project3" caption="<h1>Ink</h1>"><img src="portfolio/thumbs/6b_ink.jpg" alt="Ink" title="Ink" /></a></li>
+                    <li><a href="portfolio/large/6b_tag.jpg" class="thiswindow" rel="project3" caption="<h1>Tag</h1>"><img src="portfolio/thumbs/6b_tag.jpg" alt="Tag" title="Tag" /></a></li>
+                    <li><a href="portfolio/large/6b_feeling.jpg" class="thiswindow" rel="project3" caption="<h1>Feeling good</h1>"><img src="portfolio/thumbs/6b_feeling.jpg" alt="Feeling good" title="Feeling good" /></a></li>
+                </ul>
+            </li>
+
+            <li id="project2" class="portitem">
+                <h2>AzBye.com</h2>
+                <p></p>
+                <ul class="portthumbs">
+                    <li><a href="portfolio/large/azbye_first.jpg" class="thiswindow" rel="project2" caption="<h1>First version</h1>"><img src="portfolio/thumbs/azbye_first.jpg" alt="First version" title="First version" /></a></li>
+                    <li><a href="portfolio/large/azbye_main.jpg" class="thiswindow" rel="project2" caption="<h1>Main page</h1>"><img src="portfolio/thumbs/azbye_main.jpg" alt="Main page" title="Main page" /></a></li>
+                    <li><a href="portfolio/large/azbye_highlight.jpg" class="thiswindow" rel="project2" caption="<h1>Highlight</h1>"><img src="portfolio/thumbs/azbye_highlight.jpg" alt="Highlight" title="Highlight" /></a></li>
+                    <li><a href="portfolio/large/azbye_personal.jpg" class="thiswindow" rel="project2" caption="<h1>Personal</h1>"><img src="portfolio/thumbs/azbye_personal.jpg" alt="Personal" title="Personal" /></a></li>
+                    <li><a href="portfolio/large/azbye_phone.jpg" class="thiswindow" rel="project2" caption="<h1>Phone</h1>"><img src="portfolio/thumbs/azbye_phone.jpg" alt="Phone" title="Phone" /></a></li>
+                </ul>
+            </li>
+
+            <li id="project1" class="portitem">
+                <h2>Califa Gallery</h2>
+                <p></p>
+                <ul class="portthumbs">
+                    <li><a href="img/califapage.png" class="thiswindow" rel="project1" caption="<h1>Website</h1>"><img src="portfolio/thumbs/califa_website.jpg" alt="Website" title="Website" /></a></li>
+                    <li><a href="portfolio/large/califa_email.jpg" class="thiswindow" rel="project1" caption="<h1>Email</h1>"><img src="portfolio/thumbs/califa_email.jpg" alt="Email" title="Email" /></a></li>
+                    <li><a href="portfolio/large/califa_cards.jpg" class="thiswindow" rel="project1" caption="<h1>Cards</h1>"><img src="portfolio/thumbs/califa_cards.jpg" alt="Cards" title="Cards" /></a></li>
+                    <li><a href="portfolio/large/califa_cards1.jpg" class="thiswindow" rel="project1" caption="<h1>Cards</h1>"><img src="portfolio/thumbs/califa_cards1.jpg" alt="Cards" title="Cards" /></a></li>
+                    <li><a href="portfolio/large/califa_cards2.jpg" class="thiswindow" rel="project1" caption="<h1>Cards</h1>"><img src="portfolio/thumbs/califa_cards2.jpg" alt="Cards" title="Cards" /></a></li>
+                    <li><a href="portfolio/large/califa_newlogo.jpg" class="thiswindow" rel="project1" caption="<h1>New logo</h1>"><img src="portfolio/thumbs/califa_newlogo.jpg" alt="New logo" title="New logo" /></a></li>
+                    <li><a href="portfolio/large/califa_oldlogo.jpg" class="thiswindow" rel="project1" caption="<h1>Old logo</h1>"><img src="portfolio/thumbs/califa_oldlogo.jpg" alt="Old logo" title="Old logo" /></a></li>
+                    <li><a href="portfolio/large/califa_guitargun.jpg" class="thiswindow" rel="project1" caption="<h1>Guitar gun</h1>"><img src="portfolio/thumbs/califa_guitargun.jpg" alt="Guitar gun" title="Guitar gun" /></a></li>
+                </ul>
+            </li>
+
+        </ul>
+    </div>
+    <div class="portimage"></div>
+</div>
+
+<div id="about" class="container"><div id="doodle3" class="doodle"></div> <!-- ABOUT -->
+    <a class="homebutton mainlink" href="#home"></a>
+    <a class="prev arrow mainlink" href="#portfolio">Portfolio</a>
+    <a class="next arrow mainlink" href="#coverletter">Cover Letter</a>
+    <div class="diary">
+        <p><br/><span class="head">I'm 21 years old.</span><br /><br />
+        I am an older brother to one younger brother. My father is addicted to Facebook. My mother is a lesbian. My house is a gallery where people buy Asian art and European furniture. <br />
+        <span class="alignright italic">I am as standard as my family.</span></p><br /><br />
+
+        <p>Born in <strong>England</strong> &gt; Lived in <strong>Japan</strong> &gt; Moved to <strong>Israel</strong>.<br />
+        Somewhere along the way <span class="italic">I fell in love with design.</span><br /><br /></p>
+
+        <p>I am <span class="underline">outgoing</span> and <span class="underline">friendly</span> with a <span class="underline"><em>passion</em> for learning</span>. I'm also a <span class="underline">perfectionist</span> and <span class="underline">quite short</span>.<br/><br/></p>
+    </div>
+</div>
+
+<div id="coverletter" class="container"><div id="doodle4" class="doodle"></div> <!-- COVER LETTER -->
+    <a class="homebutton mainlink" href="#home"></a>
+    <a class="prev arrow mainlink" href="#about">About Joel</a>
+    <a class="next arrow mainlink arrow1" href="#resume">Joel's CV</a>
+    <a class="next arrow mainlink arrow2" href="#resume">On to CV</a>
+    <a id="coverletter2" class="anchor"></a>
+
+    <div class="letter">
+
+        <p>To: Office of Admission, Parsons, New School of Design.<br />
+        Dear Sir/Madam,
+        </p>
+
+        <p>My name is Joel Califa and I am an applicant for direct entry to the Design and Technology<br />
+        program. I’m writing this letter knowing that you have the power to make my dreams come true.</p>
+
+        <p>I designed my first website when I was 13, using awful table coding and the worst graphical trends imaginable. In the years since, my interest in web design and development has blossomed from a hobby into the only thing I can imagine myself doing.</p>
+
+        <p>I love the internet and though it may sound cliché I would like to become the best web designer I can possibly be; to contribute to the world through my design and to create memorable designs that stir something within people.</p>
+
+        <p>After searching near and far for the best schools that can help me get there, I am certain that Parsons is the one I want to attend. It teaches the web as I believe it should be taught, values programming and development as much as it does design.</p>
+
+        <a class="vertarrow down mainlink" href="#coverletter2">Scroll down</a>
+        <p>Despite the way my website must come across, and I greatly hope you like it, I do not believe I am nearly as good as I can be. I’m playing it by ear (or eye, if you prefer). I want to unlearn what I know now and relearn design the right way. I am eager to learn anything you are willing to teach me.</p>
+
+        <p>You may notice that my high school diploma was less than stellar. This isn’t because I lacked the smarts or the ability to study. As a teenager, unfortunately, my mind was occupied with other things. Put bluntly, school simply wasn’t as important to me then as it is now.</p>
+
+        <p>High school, to me, feels like a lifetime ago. There are nearly 4 years separating the person I was then from the person I am now. I have served in the Israeli Defense Forces where I completed over 6 months of basic and advanced fighter training, and 18 months more in the infantry and field intelligence corps.</p>
+
+        <p>After my army service, I accumulated over a year of work experience in the high-tech industry in Israel. It was only due to the prospect of attending Parsons that I gave up a career in that particular company. During that time I completed a 6 month design preparatory program. I know what I want to do with my life. If I attend Parsons, you can expect to see only the highest marks from me.</p>
+
+        <p>In short, I’m in love with web design, I’m in love with web development and I’m in love with Parsons. I’m willing to put my heart and soul into every single project you have me do, no matter how small or how large. I’m not looking for an easy ride. I know it’s going to be the hardest challenge I’ve ever faced and I’m up for the task.</p>
+
+        <a class="vertarrow up mainlink" href="#coverletter">Scroll up</a>
+        <p>Please help me make my dreams come true.<br />
+        Yours truly,<br />
+        Joel Califa</p>
+
+    </div>
+
+</div>
+
+<div id="resume" class="container"><div id="doodle5" class="doodle"></div> <!-- CV -->
+    <a class="homebutton mainlink" href="#home"></a>
+    <a class="prev arrow mainlink" href="#coverletter">Cover Letter</a>
+    <a class="next arrow mainlink" href="#contact">Contact</a>
+
+    <h1 class="hidden">Curriculum Vitae de Joel Califa who does not hablo Latin</h1>
+
+    <a class="downloadcv hidden newwindow" href="Joel_Califa_CV.pdf">Download CV</a>
+
+    <div class="col1">
+    <span class="cvname">full name</span>: Joel Califa<br />
+    <span class="cvname">birthdate</span>: 07/18/1988 (which would make me 21)<br />
+    <span class="cvname">citizenship</span>: British, Israeli<br />
+
+    <h2>education</h2>
+    <span class="cvyear"><span class="hiddenyear">2008-</span>2008</span> <span class="cvjobs">6B Studio Design Preparatory course</span><br />
+    <span class="cvyear">2003-2006</span> <span class="cvjobs">Rothberg Highschool (in Computer Science)</span>
+
+    <h2>skills</h2>
+    XHTML, CSS, PHP, SQL, Photoshop
+
+    <h2>professional experience</h2>
+
+    </div>
+
+    <div class="col2">
+
+    <ul class="jobs">
+
+        <li class="job first"><span class="cvyear">2008-2009</span> <span class="cvjobs">Technical Support Department - LivePerson</span>
+
+            <ul class="experience">
+                <li>Included work with American SMB and ENT clients (including Adobe, Apple and Bank of America).</li>
+                <li>Quick touch typing in English and multitasking capabilities for multiple concurrent online chats.</li>
+                <li>Experience in working with other departments.</li>
+                <li>Knowledge of HTML, LivePerson javascript code and operating systems (OSX and Windows).</li>
+                <li>Intimate knowledge of the LivePerson program and set up process.</li>
+                <li>Ability to stay focused over long, high pressure shifts.</li>
+            </ul>
+
+        </li>
+
+        <li class="job"><span class="cvyear"><span class="hiddenyear">2008-</span>2008</span> <span class="cvjobs">Field Marketing - Workoholic</span>
+
+            <ul class="experience">
+              <li>Completed a course in Marketing Psychology.</li>
+              <li>Experience in working in a team and working with people.</li>
+              <li>Received "Salesman of the Month" title twice in a row.</li>
+              <li>This job required charisma, persuasion and a dynamic approach to each potential client.</li>
+            </ul>
+
+        </li>
+
+        <li class="job"><span class="cvyear">2006-2008</span> <span class="cvjobs">Military Service</span>
+
+            <ul class="experience">
+                <li>Six month boot-camp in the Field Intelligence Corps.</li>
+                <li>Served in the Intelligence Office of the Infantry Command Training Base</li>
+                <li>Had no choice but to learn punctuality :)</li>
+            </ul>
+
+        </li>
+
+    </ul>
+
+    </div>
+
+</div>
+
+<div id="contact" class="container"><div id="doodle6" class="doodle"></div> <!-- CONTACT -->
+    <a class="homebutton mainlink" href="#home"></a>
+    <a class="prev arrow mainlink" href="#resume">Joel's CV</a>
+    <a class="next arrow mainlink" href="#accept">Accept him!</a>
+
+<form id="mailform" action="#contact" method="post">
+    <div class="hidden">Email joel at joelcalifa dot com</div>
+    <ul class="mailform">
+        <li class="visitor vname"><label>your name</label></li>
+        <li><input class="mail" name="name" value="" /></li>
+
+        <li class="visitor vmail"><label>your email address</label></li>
+        <li><input class="mail" name="email" value="" /></li>
+
+        <li class="visitor vquestion"><label>your question</label></li>
+        <li><textarea class="mail mail-long" name="question" rows="5" cols="15"></textarea></li>
+    </ul>
+
+        <button class="sendemail" type="submit" name="submitted"></button>
+
+        <span class="mailmessage"></span>
+</form>
+
+<ul class="contactim">
+<li class="imfacebook"><a title="Go to Facebook Profile" class="newwindow" href="https://www.facebook.com/joelcalifa">Facebook</a></li>
+<li class="imtwitter"><a title="Go to Twitter Profile" class="newwindow" href="https://twitter.com/notdetails">Twitter</a></li>
+<li class="imlinkedin"><a title="Go to Linked In Profile" class="newwindow" href="https://www.linkedin.com/profile?viewProfile=&amp;key=52356440">Linked In</a></li>
+<li class="imwindowslive"><a title="My Windows Live address is: jcalifa@gmail.com" href="msnim:chat?contact=jcalifa@gmail.com">Windows Live Messenger</a></li>
+<li class="imskype"><a title="My Skype screenname is: joelcalifa" href="skype:joelcalifa?call">Skype</a></li>
+</ul>
+
+<a id="twitterpage"></a>
+<a class="vertarrow up mainlink" href="#contact">Scroll up</a>
+<a href="#twitterpage" class="twitterpage hidden mainlink">Twitter Updates</a>
+<a href="https://twitter.com/notdetails" class="hidden twitterlink newwindow">To my twitter!</a>
+<div id="twitter">
+<ul id="twitter_update_list"></ul>
+</div>
+
+</div>
+
+<div id="accept" class="container last"> <!-- Accept -->
+    <a href="https://joelcalifa.com" class="badge"></a>
+    <div class="hidden">Thank you for taking the time to go through my site. I hope you understand that I'm not actually this cocky. I just really want to go to your school. More than anything. (pretty please?)</div>
+    <a class="homebutton mainlink" href="#home"></a>
+    <a class="prev arrow mainlink arrow1" href="#contact">Contact</a>
+    <a class="prev arrow mainlink arrow2" href="#resume">Joel's CV</a>
+    <a class="prev arrow mainlink arrow3" href="#coverletter">Cover Letter</a>
+    <a class="prev arrow mainlink arrow4" href="#about">About Joel</a>
+    <a class="prev arrow mainlink arrow5" href="#portfolio">Portfolio</a>
+</div>
+
+</body>
+</html>
