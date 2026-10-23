@@ -25,20 +25,20 @@ ol { margin-bottom: 23px; }
 #process p.last { font-weight: bold; margin-top: 46px; text-align:right; }
 </style>
 
-<script type="text/javascript" src="js/jquery-1.4.min.js"></script>
-
-<script type="text/javascript"> 
-	$(document).ready(function() {
-		  $('#process').hide();
-		  $('a#toggleprocess').click(function() {
-				$('#process').slideDown('slow');
-				return false;
-		  });
-		  $('a#closewindow').click(function() {
-				$('#process').slideDown('slow');
-				return false;
-		  });
-	});
+<style>
+#process { overflow: hidden; max-height: 0; transition: max-height .9s ease; padding-top: 0; padding-bottom: 0; }
+#process.open { padding-top: 16px; padding-bottom: 16px; }
+</style>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function () {
+  var proc = document.getElementById('process');
+  document.getElementById('toggleprocess').addEventListener('click', function (e) {
+    e.preventDefault();
+    proc.classList.add('open');
+    proc.style.maxHeight = proc.scrollHeight + 40 + 'px';
+    setTimeout(function () { proc.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 150);
+  });
+});
 </script>
 </head>
 <body>

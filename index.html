@@ -12,45 +12,11 @@
 <link rel="stylesheet" type="text/css" href="css/main.css" />
 <link rel="stylesheet" type="text/css" media="screen" href="js/colorbox.css" />
 
-<script type="text/javascript" src="js/jquery-1.4.min.js"></script>
-<script type="text/javascript">/* 2010-era scrollTo scrolls <body> on WebKit; modern browsers scroll <html>. */ jQuery.browser.safari = false;</script>
-<script type="text/javascript" src="js/jquery.scrollTo-min.js"></script>
-<script type="text/javascript" src="js/jquery.localscroll-min.js"></script>
-<script type="text/javascript" src="js/jquery.colorbox-min.js"></script>
-<script type="text/javascript" src="js/init.js"></script>
-
-<script type="text/javascript">
-  $(document).ready(function(){
-    $("a.thiswindow").colorbox({transition:"fade", maxHeight:"95%", maxWidth:"95%", current:"", title:function(){ return $(this).attr('caption');} });
-  });
-
-  $(function(){
-    $('a.newwindow').click(function(){
-      window.open(this.href);
-      return false;
-    });
-
-    // The original form posted to a PHP mailer; on a static host it opens the visitor's email app instead.
-    $('#mailform').submit(function(){
-      var name = $.trim($('input[name=name]').val()),
-          email = $.trim($('input[name=email]').val()),
-          question = $.trim($('textarea[name=question]').val()),
-          $msg = $('.mailmessage');
-      if (!name || !email || !question) {
-        $msg.addClass('mailerror').html('*please fill in <strong>all</strong> items');
-        return false;
-      }
-      if (!/^[a-zA-Z0-9._+-]+@[a-zA-Z0-9-]+\.[a-zA-Z.]{2,}$/.test(email)) {
-        $msg.addClass('mailerror').html('*<strong>invalid</strong> email address');
-        return false;
-      }
-      var body = '[name]\n ' + name + '\n\n[email]\n ' + email + '\n\n[question]\n ' + question + '\n';
-      window.location.href = 'mailto:joel@joelcalifa.com?subject=' + encodeURIComponent('AcceptJoel Email Form') + '&body=' + encodeURIComponent(body);
-      $msg.removeClass('mailerror').html('Your email is <strong>ready to send</strong>');
-      return false;
-    });
-  });
-</script>
+<style>
+  /* project tabs swap to their highlighted half on hover (was done in jQuery) */
+  #portnav a.portlink:hover { background-position: top right !important; }
+</style>
+<script src="js/site.js" defer></script>
 
 </head>
 <body>
