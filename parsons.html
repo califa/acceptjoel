@@ -30,6 +30,7 @@ ol { margin-bottom: 23px; }
 <script type="text/javascript"> 
 	$(document).ready(function() {
 		  $('#process').hide();
+		  if (window.location.hash == '#process') { $('#process').show(); $('html,body').scrollTop($('#process').offset().top); }
 		  $('a#toggleprocess').click(function() {
 				$('#process').slideDown('slow');
 				return false;
